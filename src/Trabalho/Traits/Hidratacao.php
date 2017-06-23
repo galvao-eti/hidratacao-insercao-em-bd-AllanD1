@@ -4,7 +4,9 @@ namespace Trabalho\Traits;
 
 trait Hidratacao {
     public function test() {
-        
-        var_dump(get_object_vars($this));
+        $arr = get_object_vars($this);
+        foreach ($arr as $campo => $val  ) {
+            echo $campo." = ".$val."\n";
+        }
     }
 }
