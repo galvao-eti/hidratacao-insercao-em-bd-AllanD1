@@ -5,23 +5,23 @@ namespace Trabalho;
  * @author Allan da Silva
  */
 class Produto {
-    private $descricao;
+    private $nome;
     private $valor;
 
 
-    function getDescricao() {
-        return $this->descricao;
+    function getNome() {
+        return $this->nome;
     }
 
     function getValor() {
         return $this->valor;
     }
-    function setDescricao($descricao) {
-        if (strlen(trim($descricao)) < 6) {
-            throw new \Exception("Descrição deve ter no mínimo 6 digitos");
+    function setNome($nome) {
+        if (strlen(trim($nome)) < 6) {
+            throw new \Exception("Nome deve ter no mínimo 6 digitos");
             return;
         }
-        $this->descricao = $descricao;
+        $this->nome = $nome;
     }
 
 
@@ -35,6 +35,6 @@ class Produto {
 
     use Traits\Hidratacao;
 
-    
+
    
 }

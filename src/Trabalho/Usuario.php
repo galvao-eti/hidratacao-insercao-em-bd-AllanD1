@@ -6,33 +6,33 @@ namespace Trabalho;
  */
 
 class  Usuario  {
-    private $login;
+    private $email;
     private $senha;
 
     
-    public function getLogin(){
-        return $this->login;
-    }
-    public function setLogin(){
-        if (strlen(trim($login)) < 4) {
-            throw new \Exception("Login deve ter no mínimo 4 digitos");
-            return;
-        }
-        $this->login = $login;
+    public function getEmail(){
+        return $this->email;
     }
 
     public function getSenha(){
         return $this->senha;
     }
     
-    public function setSenha(){
-       if (strlen(trim($senha)) < 6) {
-            throw new \Exception("Senha deve ter no mínimo 6 digitos");
+     function setEmail($email) {
+        if (strlen(trim($email)) < 6) {
+            throw new \Exception("email deve ter no mínimo 6 digitos");
+            return;
+        }
+        $this->email = $email;
+    }
+    function setSenha($senha) {
+        if (strlen(trim($senha)) < 6) {
+            throw new \Exception("senha deve ter no mínimo 6 digitos");
             return;
         }
         $this->senha = $senha;
     }
 
-
+    use Traits\Hidratacao;
 
 }
