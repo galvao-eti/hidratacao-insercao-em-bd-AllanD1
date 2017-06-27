@@ -3,7 +3,7 @@ namespace Trabalho;
 /**
  * Description of BancoDeDados
  *
- * @author Guilherme
+ * @author Allan da Silva
  */
 class BancoDeDados {
     public static $instncia;
